@@ -1,0 +1,235 @@
+/*#staticnavigator{
+    position: fixed;
+    width: 1367px;
+}*/
+#topmenu{
+   position: fixed;
+   width: 100%;
+   height: 50px;
+   background-color: #0079C2;
+   color: white;
+   margin-top: -17px;
+   font-family:'Myriad Pro';
+   font-size: larger;
+   font-weight: 100;  
+   margin-left: -10px; 
+   
+}
+
+#topmenu a{
+    color: #fff;
+    text-decoration: none;
+    
+}
+#topmenu_items{
+    float: right;
+    margin: 15px;
+    padding-right: 30px;
+  
+   
+}
+#topmenu_items1{
+    float: right;
+    margin: 15px;
+    padding-right: 30px;
+  
+   
+}
+#topmenu_items a{
+   
+    margin-right: 15px;  
+}
+body{
+    background-color: whitesmoke;
+    
+}
+
+textarea{
+    font-family: 'Segoe UI';    
+    font-size: medium;    
+    background-color: #fbfbfb;
+    outline-color: #0096f0;
+    margin-top: 20px;
+    width: 350px;
+    height: 100px;
+    border-width: 1px;       
+     
+}
+
+
+#submit {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    color: white;
+    font-family: 'Myriad Pro';
+    font-size: 15px;
+    width: 66px;
+    height: 28px;    
+    padding-top: ;
+    background-color: #0079C2; 
+}
+
+#submit:hover{
+    background-color: #0096f0;
+   
+}
+#submit:active{
+    background-color:#0079C2;
+}
+
+#sidebar {
+    border-width: thin;
+    border-color: #0079C2;
+    
+    vertical-align: central;
+    height: auto;
+    width: 300px;    
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 30px;   
+    float: right;
+    
+}
+
+
+#list_field {
+    outline-color:#1eadfe; 
+    width: 350px;
+    font-family: 'Segoe UI';
+    height: 25px;
+  
+}
+#feedback_form{
+    font-family: 'Myriad Pro';
+    list-style: none;
+    margin-left: 30%;
+    font-size: large;
+    
+    
+}
+#feedback_form li{
+    margin-top: 25px;
+   
+}
+#formwrap{
+   
+    padding-top: 10px;
+    float: next
+}
+.options{    
+    margin-top: 10px;
+}
+
+/*#complaint_cell {
+    margin-top: 1px;
+    width: 300px;
+    height:40px;   
+    background-color: #0079C2;
+    font-family: 'Myriad Pro light';
+    color: white;
+    -webkit-transition-duration: 0.4s;
+    overflow:hidden;
+}
+
+#complaint_cell:hover{
+    -webkit-transition-duration: 0.5s;
+     height:150px;
+    
+}
+#complaint_cell p {
+    float: page;
+    margin: 1px;
+    padding-top: 20px;
+    text-overflow: ellipsis;
+}*/
+
+#complaints_container{
+    margin-left: 25%;
+    margin-top: 30px;
+    width: auto;
+    height: 500px;
+    scrollbar-base-color: #0079C2;
+    
+    overflow-style: marquee;
+}
+
+#complaint_cell2 {
+    margin-top: 10px;
+    width:800px;
+    height:auto;   
+    background-color:#fbfbfb;
+    font-family: 'Segoe UI';
+    color: #808080;
+    
+    overflow:hidden;
+}
+
+
+/*#complaint_cell2:hover{
+    -webkit-transition-duration: 0.5s;
+     height:150px;
+    
+}*/
+
+#complaint_cell2 .email{
+    background-color:whitesmoke;
+    width: auto;
+    height: 30px;
+    font-family: 'Myriad Pro';
+    padding-top:15px; 
+    margin-bottom: 0px;
+    
+}
+
+#complaint_cell2 #solved{
+    background-color: #0096f0;
+    color: white
+}
+
+#innercell{
+    
+    border-color: #808080;
+    border-width: thin;
+    border-style: solid
+    
+}
+#branch_navigator{
+    
+    margin-top:17px;
+    margin-right:-8px;
+    
+    background-color: #0096f0;
+    position: relative
+}
+
+#branch_navigator a{
+    text-decoration: none;
+    opacity:1;
+    /*padding-top: 1000px;
+    margin-top:4000px;*/
+    color: white;
+    font-family: 'Myriad Pro';
+    text-align: center;
+}
+
+#branch_navigator p{
+    text-align: center;
+    
+    margin-top: 0px;
+    float: left;
+    padding-right: 30px;
+     
+}
+
+#branch_navigator p:hover{
+    
+    color: #7fc8f4 ;
+}
+#branch_navigator p:visited{
+    color: #4800ff;
+}
+
+#branch_navigator p:active{
+    color:rgba(48, 174, 245, 0.69);
+}

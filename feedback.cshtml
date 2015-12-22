@@ -1,0 +1,35 @@
+﻿@{
+    var db1 = Database.Open("complaintsdb");
+    if(IsPost){
+        var userfeedback=Request["page_feedback"];
+        var insert="INSERT INTO feedbacktable(feedback) VALUES(@0)";
+        db1.Execute(insert,userfeedback);
+        Response.Redirect(@Href("thankyou.cshtml"));
+    }
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="StyleSheet" type="text/css" href="StyleSheet_startpage.css">
+        <link rel="StyleSheet" type="text/css" href="StyleSheet.css">
+    </head>
+    <body>
+        <div id="topmenu1">     
+           <div id="topmenu_items1">       
+                <a href="startPage.cshtml">Home</a>
+                <a href="complaints.cshtml">Complaints</a>
+                <a href="feedback.cshtml">Feedback</a>
+           </div>                 
+       </div>
+        <h1>We'd Love to hear from you!</h1>
+        <form method="post">
+            <textarea required style="float: left;margin-left: 450px;" name="page_feedback"></textarea>
+            <button style="margin-top: 60px;margin-left: 20px;" id="submit" type="submit">Send</button>
+        </form>
+    </body>
+</html>
+<!--  -->

@@ -1,0 +1,40 @@
+﻿@{
+    var db1=Database.Open("complaintsdb");
+    var sqlselect="SELECT * FROM feedbacktable";
+    var data=db1.Query(sqlselect);
+}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+    </head>
+    <body>
+         <div id="staticnavigator">
+        @RenderPage("navigationbar.cshtml")
+        <div id="branch_navigator">
+            <a href="branchcomplaints.cshtml?b=IT"><p>IT</p></a>
+            <a href="branchcomplaints.cshtml?b=CSE"><p>CSE</p></a> 
+            <a href="branchcomplaints.cshtml?b=Civil"><p>Civil</p></a>
+            <a href="branchcomplaints.cshtml?b=Mechanical"><p>Mechanical</p></a>
+            <a href="branchcomplaints.cshtml?b=EEE"><p>EEE</p></a>
+            <a href="branchcomplaints.cshtml?b=ECE"><p>ECE</p></a>
+            <a href="branchcomplaints.cshtml?b=S&H"><p>S&H</p></a>        
+        </div>
+        </div>
+        <br><br><br>
+        <div id="complaints_container">
+            @foreach(var row in data)
+        {
+           <div id="complaint_cell2">
+               <div id="innercell">
+                <p>@row.feedback</p>
+                     
+               </div>                
+           </div>
+        }
+       </div>
+    </body>
+</html>

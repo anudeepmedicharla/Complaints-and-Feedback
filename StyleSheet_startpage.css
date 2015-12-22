@@ -1,0 +1,44 @@
+#topmenu1{
+   
+   width:fill-available;
+   height: 50px;
+   background-color: #0079C2;
+   color: white;
+   margin-top:-8px;
+   font-family:'Myriad Pro';
+   font-size: larger;
+   font-weight: 100;  
+   margin-left: -10px; 
+   
+}
+
+#topmenu1 a{
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+#topmenu_items1{
+    float: right;
+    
+    margin: 10px;
+    padding-right: 30px;
+  
+   
+}
+#topmenu_items1 a{
+   
+    margin-right: 15px;
+    
+  
+}
+
+h1{
+    font-family: 'Myriad Pro light';
+    font-weight: 100;
+    text-align: center;
+    font-size:40px;
+    color: #808080;
+    padding-top: 70px;
+}
+

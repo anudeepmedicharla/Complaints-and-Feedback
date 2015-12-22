@@ -1,0 +1,97 @@
+﻿@{
+    var db1 = Database.Open("complaintsdb");
+    var sqlselect="SELECT * FROM complaints1";
+    var data=db1.Query(sqlselect);
+    if(IsPost){
+        var thiscomplaint = Request["complaint_text"];
+        var thisname=Request["name"];
+        var thisdepartment=Request["department"];
+        var thismailid=Request["email"];
+        var thisstatus="unsolved";
+        var thistype=Request["type"];
+        if(thistype=="hidden"){
+                      
+        }
+        else{
+            thistype="open";
+        }
+        var insert="INSERT INTO complaints1(usercomplaint,email,name,department,status,type) VALUES(@0,@1,@2,@3,@4,@5)";
+        db1.Execute(insert,thiscomplaint,thismailid,thisname,thisdepartment,thisstatus,thistype);
+        Response.Redirect(@Href("complaints.cshtml"));
+
+    }
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Complaints and Feedback</title>
+        <link rel="StyleSheet" type="text/css" href="StyleSheet_startpage.css">
+        <link rel="StyleSheet" type="text/css" href="StyleSheet.css">
+      
+    </head>
+    <body>
+             
+       <div id="topmenu1">     
+           <div id="topmenu_items1">       
+                <a href="startPage.cshtml">Home</a>
+                <a href="complaints.cshtml">Complaints</a>
+                <a href="feedback.cshtml">Feedback</a>
+           </div>                 
+       </div>
+        <form method="post" style="float: left" action="" name="f1">
+            <ul id="feedback_form">                
+               <li> 
+                   <label>Name: *</label>
+                   <div id="formwrap"><input id="list_field" autofocus="true" required name="name" > </div>
+               </li>
+               <li> 
+               <label>Email:</label>
+                   <div id="formwrap">
+                   <input id="list_field" type="email" name="email">
+                   </div>
+               </li>
+               <li> Address to : *
+                  <div id=" formwrap"> 
+                       <select id="list_field" class="options" name="department">
+                         <option value="IT">IT</option>
+                         <option value="CSE">CSE</option>
+                         <option value="MECH">Mechanical</option>
+                         <option value="CIVIL">Civil</option>
+                         <option value="EEE">EEE</option>
+                         <option value="ECE">ECE</option>
+                         <option value="S&H">S&H</option>                 
+                        </select>
+                  </div>
+                 </li>
+                
+                <li>
+                    
+                <label>Complaint: *</label>                
+               <div id=" formwrap"> <textarea placeholder="your complaint here" required name="complaint_text"></textarea></div>
+                </li>
+              <li>
+                    anonymous:
+                <input type="checkbox" value="hidden" name="type">
+                    </li>
+                <li><div id="formwrap"><button id="submit" type="submit">Send</button></div></li>
+          
+        </ul>
+            </form>
+
+      <!-- <div id="sidebar">
+             @foreach(var row in data)
+        {
+           <div id="complaint_cell">
+                <p class="complaint">@row.usercomplaint</p>
+                <p class="email">@row.email</p>
+                
+           </div>
+        }
+        
+        </div>-->
+    </body>
+</html>
+
